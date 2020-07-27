@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox-styled</title>
+    <style>
+.big{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #777;
+  border-radius: 100%;
+  float: left;
+}
+.small{
+    width: 10px;
+    height: 10px;
+    background-color:white;
+    border-radius: 100px;
+    transform: translateX(5px) translateY(5px);
+}
+label{
+    font-family: arial;
+    color: gray;
+    cursor: pointer;
+}
+input{
+    display: none;
+}
+label:hover >.big{
+border-color: #444;
+}
+input:checked + .big {
+border-color: orangered;
+}
+input:checked + .big>.small{
+    background-color: orangered;
+}
+span{
+    margin-left: 10px ;
+
+}
+input:checked + .big +span {
+    color: orangered;
+}
+label:hover >span{
+color: #444;
+}
+
+
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="big">
+            <div class="small"> </div>
+        </div>
+      <span>   Sunt de acord cu conditiile! </span>
+    </label>
+
+
+</body>
+</html>
